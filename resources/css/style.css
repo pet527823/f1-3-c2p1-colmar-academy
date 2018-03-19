@@ -1,0 +1,424 @@
+/*Universal Styles*/
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*Header Section Styles*/
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 4rem;
+  border-bottom: solid 1px white;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: black;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 1rem 1.5rem;
+}
+
+header .first {
+  color: black;
+  display: inline-block;
+}
+
+header .second {
+  color: darkgray;
+  display: inline-block;
+}
+
+header .desktop {
+  padding: 1rem 1.5rem;
+  flex: 1;
+}
+
+header .desktop ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .desktop li {
+  padding-left: 1rem;
+  text-align: left;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  header .logo {
+    display: none;
+  }
+
+  header .desktop {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/*Main Section Universal Styles*/
+.main {
+  position: relative;
+  top: 4rem;
+}
+
+.main-container {
+  padding: 1rem 0rem;
+}
+
+@media only screen and (max-width: 760px) {
+  .main-container {
+    padding: 0rem;
+  }
+  .main .desktop {
+    display: none;
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-container, .video-container {
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.text-container {
+  padding: 1rem;
+}
+
+.text-container h1 {
+  font-size: 3.5rem;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.text-container h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.text-container h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.text-container p {
+  padding: 0.5rem 0rem;
+  line-height: 1.4;
+}
+
+.left-container {
+  width: 60%;
+  padding: 0rem 0.5rem;
+}
+
+.right-container {
+  width: 40%;
+}
+
+.right-container .right-container-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-left: 1px dotted white;
+  border-bottom: 1px dotted white;
+}
+
+.right-container-info .image-container {
+  width: 35%;
+}
+
+.right-container-info .text-container {
+  width: 65%;
+}
+
+.banner-info, .class-info {
+  background-color: darkgray;
+}
+
+.campus-info, .thesis-info {
+  background-color: gray;
+}
+
+/*Banner-info Section Styles*/
+.banner-info .flex-container {
+  align-items: center;
+}
+
+.banner-info .mobile {
+  display: none;
+}
+
+.headline {
+  width: 60%;
+}
+
+.headline h1, h2 {
+  text-align: left;
+}
+
+.headline .button {
+  background-color: black;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.headline .button a {
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 760px) {
+  .banner-info .mobile {
+    display: block;
+  }
+
+  .banner-info .image-mobile-container {
+    width: 100%;
+  }
+
+  .banner-info .text-mobile-container {
+    width: 100%;
+    padding: 2rem 0rem;
+  }
+
+  .banner-info .text-mobile-container h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    font-weight: bold;
+    text-align: left;
+    margin: 0rem 1rem 2rem 1rem;
+  }
+
+  .banner-info .text-mobile-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0rem 1rem 1.5rem 1rem;
+  }
+
+  .banner-info .mobile .button {
+    background-color: black;
+    text-align: center;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    padding: 0.5rem 0rem;
+    margin: 0rem 1rem;
+  }
+}
+
+/*Campus-info Section Styles*/
+.campus-info .mobile {
+  display: none;
+}
+
+.campus-info h1 {
+  text-align: left;
+}
+
+.campus-info .left-container p {
+  padding: 1.5rem 0rem;
+}
+
+@media only screen and (max-width: 760px) {
+  .campus-info .mobile {
+    display: block;
+  }
+
+  .campus-info .image-mobile-container {
+    max-width: 100%;
+    padding: 1rem 0rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px dotted gray;
+  }
+
+  .campus-info .text-mobile-container {
+    width: 100%;
+    padding: 2rem 0rem;
+    background-color: white;
+  }
+
+  .campus-info .text-mobile-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0rem 2rem 1.5rem 2rem;
+  }
+
+  .campus-info .text-mobile-container p {
+    line-height: 1.4;
+    text-align: left;
+    margin: 0rem 2rem 1.5rem 2rem;
+  }
+
+  .campus-info .text-mobile-container a {
+    line-height: 1.4;
+    text-align: left;
+    margin: 0rem 2rem 1.5rem 2rem;
+  }
+}
+
+/*Class-content Section Styles*/
+.class-info .mobile {
+  display: none;
+}
+
+.class-content {
+  padding: 1rem 3.5rem;
+}
+
+.class-content .class-item {
+  padding: 1rem;
+  width: 33.33%;
+}
+
+.class-item .image-container {
+  background-color: white;
+}
+
+.class-item .text-container {
+  height: 10rem;
+  background-color: white;
+}
+
+@media only screen and (max-width: 760px) {
+  .class-info .mobile {
+    display: block;
+    padding: 2rem 0rem;
+    background-color: white;
+    border-top: 1px dotted gray;
+  }
+
+  .class-info .text-mobile-container h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 1rem;
+  }
+
+  .class-info .text-mobile-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: left;
+    padding: 1rem 0rem 1.5rem 1rem;
+    background-color: gray;
+    margin: 0rem 1rem 0.5rem 1rem;
+  }
+}
+
+/*Thesis Section Styles*/
+.thesis-info .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  .thesis-info .mobile {
+    display: block;
+    padding: 1.5rem 0rem;
+    background-color: white;
+    border-top: 1px dotted gray;
+  }
+
+  .thesis-info .text-mobile-container h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 1rem;
+  }
+}
+
+/*Footer Section Styles*/
+footer {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: solid 1px darkgray;
+  position: relative;
+  top: 4rem;
+}
+
+footer div {
+  padding: 1rem 1.5rem;
+}
+
+footer .terms ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .terms li {
+  padding-left: 1rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 760px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .terms {
+    display: none;
+  }
+}
